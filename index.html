@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steven Lee - Portofolio Pelukis</title>
+    <link rel="stylesheet" href="styles.css" /> 
 </head>
 <body>
-    
+  <header>
+    <h1>Steven Lee</h1>
+    <p>Pelukis Ekspresif | @leeart</p>
+  </header>
+
+  <div class="nav-buttons">
+    <button onclick="showSlide('about')">Tentang Saya</button>
+    <button onclick="showSlide('gallery')">Karya Pilihan</button>
+    <button onclick="showSlide('contact')">Kontak</button>
+  </div>
+
+  <section id="about" class="slider active">
+    <h2>Tentang Saya</h2>
+    <img src="assets/foto steven.jpg" alt="Foto Steven Lee" class="about-photo" />
+    <p>
+      Nama saya <strong>Steven Lee</strong>. Saya adalah seorang pelukis yang mengangkat tema emosi, ekspresi, dan perasaan manusia dalam setiap karya saya. Hobi menggambar sudah saya tekuni sejak duduk di bangku SD. Dari kecil, saya sering mengikuti lomba-lomba seni dan berhasil memenangkan beberapa kompetisi gambar tingkat daerah dan nasional. 
+    </p>
+    <p>
+      Perjalanan saya terus berkembang hingga kini saya dikenal sebagai salah satu pelukis ekspresif terbaik yang karyanya telah dipamerkan di berbagai galeri seni. Seni adalah cara saya berkomunikasi dengan dunia.
+    </p>
+  </section>
+
+  <section id="gallery" class="slider">
+    <h2>Karya Pilihan</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets\gambar 1.jpg" alt="Karya 1 Steven Lee" />
+        <p>"Melankolia Senja" - Ekspresi kesepian dalam warna hangat.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets\gambar2.jpg" alt="Karya 2 Steven Lee" />
+        <p>"Lelaki Dalam Hening" - Refleksi keheningan batin.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets\gambar3.jpg" alt="Karya 3 Steven Lee" />
+        <p>"Gugur" - Representasi kehilangan dan harapan baru.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="slider">
+    <h2>Kontak</h2>
+    <p>Email: <a href="mailto:stevenlee@gmail.com">stevenlee@gmail.com</a></p>
+    <p>Instagram & Facebook: <a href="https://instagram.com/leeart">@leeart</a></p>
+    <p>Nomor HP: <a href="tel:081341867177">081341867177</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Steven Lee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSlide(id) {
+      const slides = document.querySelectorAll('.slider');
+      slides.forEach(slide => slide.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
